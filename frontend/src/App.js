@@ -4,12 +4,10 @@ function App() {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
 
-  // 📂 Select file
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  // 🚀 Upload resume
   const handleUpload = async () => {
     if (!file) {
       alert("Please select a file first");
@@ -20,17 +18,19 @@ function App() {
     formData.append("resume", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://resume-analyzer-te2b.onrender.com/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
-      console.log(data); // Debug
       setResult(data);
 
     } catch (error) {
-      console.error("Error:", error);
+      console.error(error);
       alert("Backend not connected");
     }
   };
@@ -39,39 +39,35 @@ function App() {
     <div style={{ padding: "30px", fontFamily: "Arial" }}>
       <h1>AI Resume Analyzer 🚀</h1>
 
-      {/* File Upload */}
       <input type="file" onChange={handleFileChange} />
       <br /><br />
 
       <button onClick={handleUpload}>Upload Resume</button>
 
-      {/* ✅ SAFE RESULT DISPLAY */}
-      {result && result.all_skills && (
+      {result && (
         <div style={{ marginTop: "20px" }}>
-
           <h2>Score: {result.score}</h2>
 
           <h3>Skills:</h3>
           <ul>
-            {result.all_skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+            {result.all_skills?.map((s, i) => (
+              <li key={i}>{s}</li>
             ))}
           </ul>
 
           <h3>Missing Skills:</h3>
           <ul>
-            {result.missing_skills?.map((skill, index) => (
-              <li key={index}>{skill}</li>
+            {result.missing_skills?.map((s, i) => (
+              <li key={i}>{s}</li>
             ))}
           </ul>
 
           <h3>Suggestions:</h3>
           <ul>
-            {result.suggestions?.map((s, index) => (
-              <li key={index}>{s}</li>
+            {result.suggestions?.map((s, i) => (
+              <li key={i}>{s}</li>
             ))}
           </ul>
-
         </div>
       )}
     </div>
