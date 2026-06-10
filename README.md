@@ -1,4 +1,4 @@
-# 🚀 AI Resume Analyzer (ATS-Based Project)
+# 🚀 AI Resume Analyzer 
 
 An AI-powered full-stack web application that analyzes resumes, extracts skills using NLP, calculates a score, and provides improvement suggestions.
 
