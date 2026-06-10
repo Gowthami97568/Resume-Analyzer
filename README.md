@@ -108,12 +108,6 @@ npm start
 
 ---
 
-## 👩‍💻 Author
-
-**Gowthami Sanaka**
-
----
-
 ## ⭐ Acknowledgment
 
 This project uses open-source libraries like Flask, React, and spaCy.
