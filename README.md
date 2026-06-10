@@ -11,7 +11,7 @@ An AI-powered web application that analyzes resumes, extracts skills, calculates
 * 📊 Calculate resume score
 * ❌ Identify missing skills
 * 💡 Provide improvement suggestions
-* 🧾 Show extracted entities (optional)
+* 🧾 Show extracted entities 
 
 ---
 
@@ -24,7 +24,8 @@ An AI-powered web application that analyzes resumes, extracts skills, calculates
 ### Backend
 
 * Flask
-* spaCy (NLP)
+* spaCy
+* NLP
 * pdfplumber
 
 ### Tools
