@@ -1,36 +1,66 @@
-# 🚀 AI Resume Analyzer
+# 🚀 AI Resume Analyzer (ATS-Based Project)
 
-An AI-powered web application that analyzes resumes, extracts skills, calculates a score, and provides improvement suggestions.
-
----
-
-## 📌 Features
-
-* 📄 Upload resume (PDF)
-* 🧠 Extract skills using NLP (spaCy)
-* 📊 Calculate resume score
-* ❌ Identify missing skills
-* 💡 Provide improvement suggestions
-* 🧾 Show extracted entities 
+An AI-powered full-stack web application that analyzes resumes, extracts skills using NLP, calculates a score, and provides improvement suggestions.
 
 ---
 
-## 🛠 Tech Stack
+## 📑 Table of Contents
 
-### Frontend
+* Features
+* Tech Stack
+* How It Works
+* Project Structure
+* Installation
+* Running the Application
+* Using the Web UI
+* Scoring System
+* Future Improvements
+
+---
+
+## ✨ Features
+
+* 📄 Upload Resume (PDF)
+* 🧠 NLP-based Skill Extraction
+* 📊 Resume Score Calculation
+* ❌ Missing Skills Detection
+* 💡 Smart Suggestions
+* 🌐 Interactive React UI
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔹 Frontend
 
 * React
+* JavaScript
+* CSS (via React components)
 
-### Backend
+### 🔹 Backend
 
 * Flask
-* spaCy
-* NLP
-* pdfplumber
+* spaCy (Natural Language Processing)
+* pdfplumber (PDF text extraction)
 
-### Tools
+### 🔹 Tools & Platforms
 
+* Git & GitHub
 * Postman (API testing)
+* Render (Backend deployment)
+
+---
+
+## ⚙️ How It Works
+
+1. User uploads resume from React UI
+2. React sends file to Flask backend
+3. Backend extracts text using pdfplumber
+4. spaCy processes text (NLP)
+5. Skills are matched with predefined categories
+6. Score is calculated
+7. Suggestions are generated
+8. Results are displayed in UI
 
 ---
 
@@ -44,71 +74,80 @@ resume-analyzer/
  │
  ├── frontend/
  │   ├── src/
+ │   ├── public/
  │   ├── package.json
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## 🛠️ Installation
 
-### 🔹 Backend Setup
+### Backend
 
-```bash
+```
 cd backend
-python -m venv venv
-venv\Scripts\activate
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-python app.py
+```
+
+### Frontend
+
+```
+cd frontend
+npm install
 ```
 
 ---
 
-### 🔹 Frontend Setup
+## ▶️ Running the Application
 
-```bash
-cd frontend
-npm install
+### Start Backend
+
+```
+python app.py
+```
+
+### Start Frontend
+
+```
 npm start
 ```
 
 ---
 
-## 🌐 Usage
+## 🌐 Using the Web UI
 
-1. Open the React app in browser
-2. Upload your resume (PDF)
-3. View:
+1. Open browser: http://localhost:3000
+2. Upload resume
+3. Click upload
+4. View:
 
-   * Score 📊
-   * Skills ✅
-   * Missing skills ❌
-   * Suggestions 💡
-
----
-
-## 🚀 Deployment
-
-* Frontend → Vercel
-* Backend → Render
+   * Score
+   * Skills
+   * Missing skills
+   * Suggestions
 
 ---
 
-## 📸 Screenshots
+## 📊 Scoring System
 
-(Add your project screenshots here)
+```
+Score = (Matched Skills / Total Skills) × 100
+```
 
----
-
-## 💡 Future Improvements
-
-* Better UI design
-* Add authentication
-* Support DOCX files
-* Advanced AI scoring
+👉 This is a **Resume Match Score** based on predefined skills.
 
 ---
 
-## ⭐ Acknowledgment
+## 🚀 Future Improvements
 
-This project uses open-source libraries like Flask, React, and spaCy.
+* Job Description Matching (Real ATS feature)
+* Improved UI/UX design
+* Support for DOCX files
+* Advanced AI-based scoring
+
+---
+
+## 📌 Project Summary
+
+> AI-powered Resume Analyzer that evaluates resumes using NLP and provides score-based insights and improvement suggestions.
