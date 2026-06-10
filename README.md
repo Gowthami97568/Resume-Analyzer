@@ -1,4 +1,4 @@
-# 🚀 AI Resume Analyzer 
+# 🚀 AI Resume Analyzer
 
 An AI-powered full-stack web application that analyzes resumes, extracts skills using NLP, calculates a score, and provides improvement suggestions.
 
@@ -14,6 +14,7 @@ An AI-powered full-stack web application that analyzes resumes, extracts skills 
 * Running the Application
 * Using the Web UI
 * Scoring System
+* Deployment
 * Future Improvements
 
 ---
@@ -33,9 +34,9 @@ An AI-powered full-stack web application that analyzes resumes, extracts skills 
 
 ### 🔹 Frontend
 
-* React
+* React (Create React App)
 * JavaScript
-* CSS (via React components)
+* CSS
 
 ### 🔹 Backend
 
@@ -48,6 +49,7 @@ An AI-powered full-stack web application that analyzes resumes, extracts skills 
 * Git & GitHub
 * Postman (API testing)
 * Render (Backend deployment)
+* Vercel (Frontend deployment)
 
 ---
 
@@ -135,16 +137,31 @@ npm start
 Score = (Matched Skills / Total Skills) × 100
 ```
 
-👉 This is a **Resume Match Score** based on predefined skills.
+👉 This is a **Resume Match Score**, not a full ATS score.
 
 ---
 
-## 🚀 Future Improvements
+## 🚀 Deployment
 
-* Job Description Matching (Real ATS feature)
-* Improved UI/UX design
-* Support for DOCX files
-* Advanced AI-based scoring
+### 🔹 Backend (Render)
+
+* Deployed using Render  
+* Live API URL:  
+  https://resume-analyzer-te2b.onrender.com  
+
+---
+
+### 🔹 Frontend (Vercel)
+
+* Deployed using Vercel  
+* Live App URL:  
+  https://resume-analyzer-vert-tau.vercel.app  
+---
+
+### 🔹 Frontend (Vercel)
+
+* Deployed using Vercel
+* Connects to Render backend API
 
 ---
 
